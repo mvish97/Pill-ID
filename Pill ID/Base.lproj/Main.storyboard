@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oYS-PE-rEl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,42 +28,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-462" y="162"/>
+            <point key="canvasLocation" x="385" y="-1314"/>
         </scene>
         <!--Info-->
         <scene sceneID="d7W-1v-szJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ojO-IE-KfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="YLi-1A-ZOA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8D2-Ke-c9T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Diphenhydramine HCI 25)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq4-vg-Elv">
-                                <rect key="frame" x="0.0" y="66" width="375" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Benadryl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTx-Zx-ymo">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="qJ5-If-eE6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U12-QY-ps4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benadryl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTx-Zx-ymo">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+                                        <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Diphenhydramine HCI 25)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq4-vg-Elv">
+                                        <rect key="frame" x="0.0" y="41" width="375" height="25"/>
+                                        <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Benadryl is a brand name for diphenhydramine, an antihistamine. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZo-58-IBZ">
-                                <rect key="frame" x="16" y="125" width="343" height="66"/>
+                                <rect key="frame" x="8" y="94" width="359" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treats the following illnesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vm4-Ya-3Yr">
-                                <rect key="frame" x="0.0" y="215" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="157" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
@@ -71,14 +76,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergies, runny nose, sneezing, itchy eyes, and itching in the nose or throat." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRR-RU-kIH">
-                                <rect key="frame" x="16" y="260" width="343" height="66"/>
+                                <rect key="frame" x="16" y="205" width="343" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Side effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-GP-8Wt">
-                                <rect key="frame" x="0.0" y="345" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="279" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
@@ -86,14 +91,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drowsiness, dry mouth, dizziness, nausea, headache, and loss of appetite." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYK-Ou-fcD">
-                                <rect key="frame" x="16" y="393" width="343" height="66"/>
+                                <rect key="frame" x="16" y="327" width="343" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Purchase at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PK-b9-eKa">
-                                <rect key="frame" x="0.0" y="474" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="401" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
@@ -101,14 +106,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Walgreens, Walmart, Alberstsons, or" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjf-eB-Sz2">
-                                <rect key="frame" x="16" y="529" width="343" height="39"/>
+                                <rect key="frame" x="16" y="463" width="343" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="this link" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu8-d7-e0M">
-                                <rect key="frame" x="16" y="560" width="343" height="39"/>
+                                <rect key="frame" x="16" y="510" width="343" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <color key="textColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -116,14 +121,24 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qJ5-If-eE6" firstAttribute="trailing" secondItem="t45-Hv-4ii" secondAttribute="trailing" id="IZP-ya-OW7"/>
+                            <constraint firstItem="t45-Hv-4ii" firstAttribute="trailing" secondItem="U12-QY-ps4" secondAttribute="trailing" id="Is4-mt-M69"/>
+                            <constraint firstItem="U12-QY-ps4" firstAttribute="top" secondItem="t45-Hv-4ii" secondAttribute="top" id="K6C-zX-jQg"/>
+                            <constraint firstItem="qJ5-If-eE6" firstAttribute="top" secondItem="8D2-Ke-c9T" secondAttribute="top" id="LgU-Xv-UY0"/>
+                            <constraint firstItem="U12-QY-ps4" firstAttribute="leading" secondItem="t45-Hv-4ii" secondAttribute="leading" id="SWH-rb-4BY"/>
+                            <constraint firstItem="qJ5-If-eE6" firstAttribute="bottom" secondItem="t45-Hv-4ii" secondAttribute="bottom" id="j8e-XS-FJP"/>
+                            <constraint firstItem="qJ5-If-eE6" firstAttribute="leading" secondItem="t45-Hv-4ii" secondAttribute="leading" id="k6R-Fm-FxM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="t45-Hv-4ii"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="icons8-info" id="0en-VH-DH5">
                         <color key="badgeColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojO-IE-KfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1624.8" y="-97.601199400299862"/>
+            <point key="canvasLocation" x="-1802" y="116"/>
         </scene>
         <!--More-->
         <scene sceneID="MMI-xM-0fA">
@@ -133,55 +148,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pills Background" translatesAutoresizingMaskIntoConstraints="NO" id="zs2-o1-Dhm">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zs2-o1-Dhm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg0-Aw-28S">
-                                <rect key="frame" x="16" y="240" width="343" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AC-8L-aVc">
-                                <rect key="frame" x="16" y="330" width="343" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
-                                <state key="normal" title="FAQ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UO-pk-cHu">
-                                <rect key="frame" x="16" y="420" width="343" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cQ-Hu-e0J">
-                                <rect key="frame" x="16" y="150" width="343" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
-                                <state key="normal" title="Recent Scans">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="c5Z-Mz-j8H">
+                                <rect key="frame" x="16" y="120" width="343" height="398"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cQ-Hu-e0J">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="75.5"/>
+                                        <color key="backgroundColor" red="0.011764705882352941" green="0.78823529411764703" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="Recent Scans">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg0-Aw-28S">
+                                        <rect key="frame" x="0.0" y="107.5" width="343" height="75.5"/>
+                                        <color key="backgroundColor" red="0.01176470588" green="0.78823529410000004" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AC-8L-aVc">
+                                        <rect key="frame" x="0.0" y="215" width="343" height="75.5"/>
+                                        <color key="backgroundColor" red="0.01176470588" green="0.78823529410000004" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="FAQ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UO-pk-cHu">
+                                        <rect key="frame" x="0.0" y="322.5" width="343" height="75.5"/>
+                                        <color key="backgroundColor" red="0.01176470588" green="0.78823529410000004" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="Help">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ud7-c1-mYv" firstAttribute="trailing" secondItem="c5Z-Mz-j8H" secondAttribute="trailing" constant="16" id="81n-ie-XJB"/>
+                            <constraint firstItem="Ud7-c1-mYv" firstAttribute="bottom" secondItem="c5Z-Mz-j8H" secondAttribute="bottom" constant="100" id="8aA-67-VfZ"/>
+                            <constraint firstItem="zs2-o1-Dhm" firstAttribute="top" secondItem="qFE-0o-RIB" secondAttribute="top" id="NCE-tW-qwR"/>
+                            <constraint firstItem="c5Z-Mz-j8H" firstAttribute="leading" secondItem="Ud7-c1-mYv" secondAttribute="leading" constant="16" id="bTR-34-bJd"/>
+                            <constraint firstItem="c5Z-Mz-j8H" firstAttribute="top" secondItem="Ud7-c1-mYv" secondAttribute="top" constant="100" id="hbs-Fw-nlO"/>
+                            <constraint firstItem="zs2-o1-Dhm" firstAttribute="leading" secondItem="Ud7-c1-mYv" secondAttribute="leading" id="hj2-cV-4io"/>
+                            <constraint firstItem="zs2-o1-Dhm" firstAttribute="bottom" secondItem="Ud7-c1-mYv" secondAttribute="bottom" id="pck-fC-5kj"/>
+                            <constraint firstItem="zs2-o1-Dhm" firstAttribute="trailing" secondItem="Ud7-c1-mYv" secondAttribute="trailing" id="s99-IT-2oc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ud7-c1-mYv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="icons8-more" id="Aty-BK-vTC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkW-kh-Ipm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197.5999999999999" y="-759.67016491754134"/>
+            <point key="canvasLocation" x="980" y="116"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eTs-0N-v96">
@@ -191,28 +236,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.011764705882352941" green="0.78823529411764703" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="a7s-Ye-n6S" kind="relationship" relationship="viewControllers" id="m0y-no-UMB"/>
-                        <segue destination="2y9-4F-uHq" kind="relationship" relationship="viewControllers" id="QnV-Qc-bXa"/>
                         <segue destination="YLi-1A-ZOA" kind="relationship" relationship="viewControllers" id="fav-X6-sls"/>
+                        <segue destination="2y9-4F-uHq" kind="relationship" relationship="viewControllers" id="QnV-Qc-bXa"/>
+                        <segue destination="a7s-Ye-n6S" kind="relationship" relationship="viewControllers" id="m0y-no-UMB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQH-dn-cle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="-426"/>
+            <point key="canvasLocation" x="-430" y="-760"/>
         </scene>
         <!--Scan-->
         <scene sceneID="BGy-RG-3pS">
             <objects>
-                <viewController id="2y9-4F-uHq" sceneMemberID="viewController">
+                <viewController id="2y9-4F-uHq" customClass="CameraVC" customModule="Pill_ID" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ouo-QI-gte">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3627" translatesAutoresizingMaskIntoConstraints="NO" id="bvH-Il-boK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Diphenhydramine HCI 25)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYg-I0-N99">
                                 <rect key="frame" x="77" y="149" width="218" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -220,26 +264,31 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFa-y4-eBA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PCk-Df-oqm" firstAttribute="trailing" secondItem="bvH-Il-boK" secondAttribute="trailing" id="3je-HJ-Cdn"/>
-                            <constraint firstAttribute="bottom" secondItem="bvH-Il-boK" secondAttribute="bottom" constant="49" id="UYk-5F-4tk"/>
-                            <constraint firstItem="bvH-Il-boK" firstAttribute="leading" secondItem="PCk-Df-oqm" secondAttribute="leading" id="WKr-mN-2N3"/>
-                            <constraint firstItem="bvH-Il-boK" firstAttribute="top" secondItem="PCk-Df-oqm" secondAttribute="top" id="o90-bC-UgF"/>
+                            <constraint firstItem="PCk-Df-oqm" firstAttribute="trailing" secondItem="dFa-y4-eBA" secondAttribute="trailing" id="3ZT-Ah-TqY"/>
+                            <constraint firstItem="dFa-y4-eBA" firstAttribute="leading" secondItem="PCk-Df-oqm" secondAttribute="leading" id="uaN-3X-x2F"/>
+                            <constraint firstItem="PCk-Df-oqm" firstAttribute="bottom" secondItem="dFa-y4-eBA" secondAttribute="bottom" id="vnT-Wj-Dp3"/>
+                            <constraint firstItem="dFa-y4-eBA" firstAttribute="top" secondItem="PCk-Df-oqm" secondAttribute="top" id="xfT-5U-1M1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PCk-Df-oqm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="icons8-camera" id="06B-Rq-8On"/>
+                    <connections>
+                        <outlet property="sceneView" destination="dFa-y4-eBA" id="Aga-Qn-KnW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYv-2g-N4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1160.8" y="587.85607196401804"/>
+            <point key="canvasLocation" x="-431" y="116"/>
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_3627" width="750" height="1334"/>
-        <image name="Pills Background" width="168" height="299"/>
+        <image name="background" width="640" height="960"/>
         <image name="icons8-camera" width="30" height="30"/>
         <image name="icons8-info" width="30" height="30"/>
         <image name="icons8-more" width="30" height="30"/>
