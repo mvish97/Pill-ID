@@ -13,6 +13,7 @@
 		05332C271FAAAF2800203A51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05332C251FAAAF2800203A51 /* Main.storyboard */; };
 		05332C291FAAAF2800203A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05332C281FAAAF2800203A51 /* Assets.xcassets */; };
 		05332C2C1FAAAF2800203A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05332C2A1FAAAF2800203A51 /* LaunchScreen.storyboard */; };
+		056D26C71FB4FDA300F36061 /* MoreInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D26C61FB4FDA300F36061 /* MoreInfoVC.swift */; };
 		5163998B1FAB9CA4005939CA /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5163998A1FAB9CA4005939CA /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		05332C281FAAAF2800203A51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05332C2B1FAAAF2800203A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05332C2D1FAAAF2800203A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		056D26C61FB4FDA300F36061 /* MoreInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoVC.swift; sourceTree = "<group>"; };
 		5163998A1FAB9CA4005939CA /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 				05332C211FAAAF2800203A51 /* art.scnassets */,
 				05332C231FAAAF2800203A51 /* ViewController.swift */,
 				5163998A1FAB9CA4005939CA /* CameraVC.swift */,
+				056D26C61FB4FDA300F36061 /* MoreInfoVC.swift */,
 				05332C251FAAAF2800203A51 /* Main.storyboard */,
 				05332C281FAAAF2800203A51 /* Assets.xcassets */,
 				05332C2A1FAAAF2800203A51 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 				05332C241FAAAF2800203A51 /* ViewController.swift in Sources */,
 				5163998B1FAB9CA4005939CA /* CameraVC.swift in Sources */,
 				05332C201FAAAF2800203A51 /* AppDelegate.swift in Sources */,
+				056D26C71FB4FDA300F36061 /* MoreInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
