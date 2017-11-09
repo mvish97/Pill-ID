@@ -15,6 +15,10 @@ class CameraVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let scene = SCNScene(named: "art.scnassets/goku.scn")!
+        
+        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
