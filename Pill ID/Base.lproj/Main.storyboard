@@ -35,7 +35,7 @@
         <!--Info-->
         <scene sceneID="d7W-1v-szJ">
             <objects>
-                <viewController id="YLi-1A-ZOA" sceneMemberID="viewController">
+                <viewController id="YLi-1A-ZOA" customClass="MoreInfoVC" customModule="Pill_ID" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8D2-Ke-c9T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,27 +125,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nVZ-Vr-Hst" firstAttribute="leading" secondItem="8D2-Ke-c9T" secondAttribute="leading" id="28a-TL-fWb"/>
-                            <constraint firstAttribute="trailing" secondItem="nVZ-Vr-Hst" secondAttribute="trailing" id="HXv-XJ-GRF"/>
-                            <constraint firstItem="nVZ-Vr-Hst" firstAttribute="top" secondItem="8D2-Ke-c9T" secondAttribute="top" id="HkO-GO-CM8"/>
+                            <constraint firstItem="z2N-K4-NZj" firstAttribute="leading" secondItem="t45-Hv-4ii" secondAttribute="leading" id="7Xe-HM-Krr"/>
                             <constraint firstItem="qJ5-If-eE6" firstAttribute="trailing" secondItem="t45-Hv-4ii" secondAttribute="trailing" id="IZP-ya-OW7"/>
-                            <constraint firstItem="hjy-h3-NnC" firstAttribute="leading" secondItem="t45-Hv-4ii" secondAttribute="leading" id="IjX-hB-jbu"/>
-                            <constraint firstItem="t45-Hv-4ii" firstAttribute="trailing" secondItem="U12-QY-ps4" secondAttribute="trailing" id="Is4-mt-M69"/>
-                            <constraint firstItem="U12-QY-ps4" firstAttribute="top" secondItem="t45-Hv-4ii" secondAttribute="top" id="K6C-zX-jQg"/>
                             <constraint firstItem="qJ5-If-eE6" firstAttribute="top" secondItem="8D2-Ke-c9T" secondAttribute="top" id="LgU-Xv-UY0"/>
-                            <constraint firstItem="U12-QY-ps4" firstAttribute="top" secondItem="nVZ-Vr-Hst" secondAttribute="bottom" id="Lxw-g1-w2h"/>
-                            <constraint firstItem="U12-QY-ps4" firstAttribute="leading" secondItem="t45-Hv-4ii" secondAttribute="leading" id="SWH-rb-4BY"/>
-                            <constraint firstAttribute="trailing" secondItem="hjy-h3-NnC" secondAttribute="trailing" id="bv5-pU-mjF"/>
-                            <constraint firstItem="hjy-h3-NnC" firstAttribute="top" secondItem="U12-QY-ps4" secondAttribute="bottom" constant="8" id="ilF-fF-w3g"/>
+                            <constraint firstItem="z2N-K4-NZj" firstAttribute="top" secondItem="t45-Hv-4ii" secondAttribute="top" id="Okm-H1-8ue"/>
+                            <constraint firstItem="t45-Hv-4ii" firstAttribute="bottom" secondItem="VLS-zp-cii" secondAttribute="bottom" id="ZBb-9k-d9U"/>
+                            <constraint firstItem="t45-Hv-4ii" firstAttribute="trailing" secondItem="VLS-zp-cii" secondAttribute="trailing" id="cZe-Us-PDq"/>
                             <constraint firstItem="qJ5-If-eE6" firstAttribute="bottom" secondItem="t45-Hv-4ii" secondAttribute="bottom" id="j8e-XS-FJP"/>
                             <constraint firstItem="qJ5-If-eE6" firstAttribute="leading" secondItem="t45-Hv-4ii" secondAttribute="leading" id="k6R-Fm-FxM"/>
-                            <constraint firstItem="t45-Hv-4ii" firstAttribute="bottom" secondItem="hjy-h3-NnC" secondAttribute="bottom" constant="8" id="nHE-aK-1bQ"/>
+                            <constraint firstItem="z2N-K4-NZj" firstAttribute="trailing" secondItem="t45-Hv-4ii" secondAttribute="trailing" id="neJ-il-7OW"/>
+                            <constraint firstItem="VLS-zp-cii" firstAttribute="leading" secondItem="t45-Hv-4ii" secondAttribute="leading" id="ssQ-oD-TNh"/>
+                            <constraint firstItem="VLS-zp-cii" firstAttribute="top" secondItem="z2N-K4-NZj" secondAttribute="bottom" id="ycF-Sf-HQH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t45-Hv-4ii"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="icons8-info" id="0en-VH-DH5">
                         <color key="badgeColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="pillNameLabel" destination="z2N-K4-NZj" id="lrj-rQ-ZdY"/>
+                        <outlet property="tableView" destination="VLS-zp-cii" id="GtF-nf-INr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojO-IE-KfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
