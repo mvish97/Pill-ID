@@ -8,42 +8,111 @@
 
 import UIKit
 import ARKit
+import Vision
 
-class CameraVC: UIViewController {
+
+class CameraVC: UIViewController, ARSessionDelegate, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     let bubbleDepth : Float = 0.01
     var latestPrediction : String = "…"
+    var timer = Timer()
     
+    var pills = ["Tylenol", "Advil"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let scene = SCNScene(named: "art.scnassets/goku.scn")!
+        sceneView.delegate = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
+        view.addGestureRecognizer(tapGesture)
         
-        sceneView.scene = scene
+        
     }
     
-    @IBAction func moreInfo(_ sender: UIButton) {
-        let node : SCNNode = createNewBubbleParentNode("Advil")
-        sceneView.scene.rootNode.addChildNode(node)
-        node.position = SCNVector3(0,0,0)
+    
+//    func renderer(_ renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: TimeInterval) {
+//        guard let model = try? VNCoreMLModel(for: VGG16().model) else {return}
+//
+//        let request = VNCoreMLRequest(model: model) {
+//            (finishedReq, err) in
+//
+//            //print(finishedReq.results)
+//
+//            guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
+//
+//            guard let firstObservation = results.first else {return}
+//
+//            print(firstObservation.identifier, firstObservation.confidence)
+//
+//        }
+//        try? VNImageRequestHandler(cvPixelBuffer: (self.sceneView.session.currentFrame?.capturedImage)!, options: [:]).perform([request])
+//    }
+    
+//    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+//
+//
+//    }
+    
+    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
+        // HIT TEST : REAL WORLD
+        // Get Screen Centre
+        let screenCentre : CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
+        
+        let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCentre, types: [.featurePoint]) // Alternatively, we could use '.existingPlaneUsingExtent' for more grounded hit-test-points.
+        
+        if let closestResult = arHitTestResults.first {
+            // Get Coordinates of HitTest
+            let transform : matrix_float4x4 = closestResult.worldTransform
+            let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+            
+            // Create 3D Text
+            var pill = "Tylenol"
+            /*if self.pills.count > 0 {
+                pill = pills.popLast()!
+            }*/
+            let node : SCNNode = createNewBubbleParentNode(pill)
+            sceneView.scene.rootNode.addChildNode(node)
+            node.position = worldCoord
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         let configuration = ARWorldTrackingConfiguration()
-        
+        configuration.planeDetection = .horizontal
         sceneView.session.run(configuration, options: [])
         
         sceneView.automaticallyUpdatesLighting = true
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(CameraVC.processImage), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         sceneView.session.pause()
+        timer.invalidate()
     }
+    
+    @objc func processImage() {
+        
+        guard let model = try? VNCoreMLModel(for: VGG16().model) else {return}
+        
+        let request = VNCoreMLRequest(model: model) {
+            (finishedReq, err) in
+
+            //print(finishedReq.results)
+
+            guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
+
+            guard let firstObservation = results.first else {return}
+
+            print(firstObservation.identifier, firstObservation.confidence)
+
+        }
+        try? VNImageRequestHandler(cvPixelBuffer: (self.sceneView.session.currentFrame?.capturedImage)!, options: [:]).perform([request])
+    }
+    
     
     func createNewBubbleParentNode(_ text : String) -> SCNNode {
         // Warning: Creating 3D Text is susceptible to crashing. To reduce chances of crashing; reduce number of polygons, letters, smoothness, etc.
@@ -54,11 +123,11 @@ class CameraVC: UIViewController {
         
         // BUBBLE-TEXT
         let bubble = SCNText(string: text, extrusionDepth: CGFloat(bubbleDepth))
-        var font = UIFont(name: "Avenir-Heavy", size: 0.15)
+        let font = UIFont(name: "Avenir-Heavy", size: 0.15)
 //        font = font?.withTraits(traits: .traitBold)
         bubble.font = font
         bubble.alignmentMode = kCAAlignmentCenter
-        bubble.firstMaterial?.diffuse.contents = UIColor.orange
+        bubble.firstMaterial?.diffuse.contents =  UIColor(red: 0.25, green: 0.52, blue: 0.95, alpha: 1.00)
         bubble.firstMaterial?.specular.contents = UIColor.white
         bubble.firstMaterial?.isDoubleSided = true
         // bubble.flatness // setting this too low can cause crashes.
